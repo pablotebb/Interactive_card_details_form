@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Own css -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <!-- MAIN CONTAINER  -->
+    <main class="main-container">
+      <!-- SECTION CARDS -->
+      <section class="section-cards">
+        <div class="section-cards-background">
+          <!-- CARD BACK -->
+          <div class="card-background-back">
+            <p class="card-background-back__card_number">000</p>
+          </div>
+          <!-- CARD FORE -->
+          <div class="card-background-fore">
+            <img
+              class="card-background-fore__logo"
+              src="./images/card-logo.svg"
+              alt="card logo"
+            />
+            <p class="card-background-fore__number">0000 0000 0000 0000</p>
+            <div class="container">
+              <p class="card-background-fore__name">Jane Appleseed</p>
+              <p class="card-background-fore__numbers">00/00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION FORM -->
+      <section class="section-form">
+        <form class="section-form" action="#">
+          <!-- INPUT 1 -->
+          <label class="section-form__label-1" for="input-1"
+            >Cardholder Name</label
+          >
+          <input
+            class="section-form__input-name"
+            id="input_1"
+            name="input_1"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <!-- ERROR 1 -->
+          <div class="section-form__input-name--error error"></div>
+          <!-- INPUT 2 -->
+          <label class="section-form__label-2" for="input-1">
+            Card Number</label
+          >
+          <input
+            class="section-form__input-number"
+            id="input_1"
+            name="input_1"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <!-- ERROR 2 -->
+          <div class="section-form__input-number--error error"></div>
+          <!-- GRID -->
+          <div>
+            <!-- 1 -->
+            <label class="section-form__date-label-1" for="">
+              Exp. Date (MM/YY)</label
+            >
+            <!-- 2 -->
+            <label class="section-form__date-label-2" for="">CVC</label>
+            <!-- 3 -->
+            <div>
+              <input
+                class="section-form__date-input-mm"
+                type="text"
+                placeholder="MM"
+              />
+              <input
+                class="section-form__date-input-yy"
+                type="text"
+                placeholder="YY"
+              />
+            </div>
+            <!-- 4 -->
+            <input
+              class="section-form__date-input-cvc"
+              type="text"
+              placeholder="e.g. 123"
+            />
+            <!-- 5 -->
+            <div>
+              <div class="section-form__mm--error">Can't be blank</div>
+              <div class="section-form__yy--error">Can't be blank</div>
+            </div>
+            <!-- 6 -->
+            <div class="section-form__cvc--error"></div>
+          </div>
+          <button class="section-form__confirm-button">Confirm</button>
+        </form>
+      </section>
+      <!-- SECTION THANK-YOU -->
+      <section class="thank-you">
+        <img
+          class="thank-you__icon"
+          src="./images/icon-complete.svg"
+          alt="icon complete"
+        />
+        <h1 class="thank-you__title">Thank you!</h1>
+        <p class="thank-you__description">We've added your card details</p>
+        <button class="thank-you__button-continue">Continue</button>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Pablo Belda</a>.
+    </footer>
+  </body>
+</html>
