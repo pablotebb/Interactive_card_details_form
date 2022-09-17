@@ -1,0 +1,121 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-form-information {
+  // border: 3px solid blue;
+  display: block;
+  padding: 3.125rem 1.25rem 1.25rem 1.25rem;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+
+  &__label-1 {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.3125rem;
+  }
+
+  &__input-name {
+    height: 2.5rem;
+    border-radius: 0.4375rem;
+    padding-left: 0.9375rem;
+    border: 0.0625rem solid v.$Light-grayish-violet;
+    font-size: 0.9em;
+    color: v.$Dark-grayish-violet;
+    font-weight: 500;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 1.125rem;
+  }
+
+  &__input-name--error {
+  }
+
+  &__label-2 {
+    @extend .section-form__label-1;
+  }
+
+  &__input-number {
+    @extend .section-form__input-name;
+  }
+
+  &__input-number--error {
+  }
+
+  // GRID
+  .container-1 {
+    // border: 2px solid yellow;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // 1
+  &__date-label-1 {
+    @extend .section-form__label-1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  // 2
+  &__date-label-2 {
+    @extend .section-form__label-1;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .container-1-1 {
+    // border: 1px solid green;
+    display: flex;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    gap: 0.5rem;
+  }
+
+  // 3
+  &__date-input-mm {
+    // border: 1px solid black;
+    width: 4rem;
+    @include m.input-exp-date;
+  }
+
+  &__date-input-yy {
+    width: 4.6875rem;
+    @include m.input-exp-date;
+  }
+
+  // 4
+  &__date-input-cvc {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-left: 0.625rem;
+    border-radius: 0.4375rem;
+    border: 0.0625rem solid v.$Light-grayish-violet;
+    outline: none;
+  }
+
+  // 5
+  .container-2 {
+    display: flex;
+    gap: 0.8125rem;
+    font-size: 0.5em;
+    color: v.$Red-input-errors;
+  }
+
+  &__mm--error {
+  }
+
+  &__yy--error {
+  }
+
+  // 6
+  &__cvc--error {
+    font-size: 0.6em;
+    color: v.$Red-input-errors;
+  }
+
+  &__confirm-button {
+    @include m.button-web;
+  }
+}

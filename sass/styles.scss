@@ -1,3 +1,14 @@
-@use "variables";
+@use "variables" as v;
 @use "initial";
 @use "footer";
+@use "mixins" as m;
+@use "section-form-information";
+@use "section-cards";
+@use "thank-you";
+
+.main-container {
+  border: 1px solid red;
+  width: v.$width-mobile;
+  height: v.$height-mobile;
+  margin: 0 auto 60px;
+}

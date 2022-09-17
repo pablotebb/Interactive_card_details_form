@@ -1,0 +1,81 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-cards {
+  // border: 1px solid red;
+  position: relative;
+  .section-cards-background {
+    background: {
+      image: url(../images/bg-main-mobile.png);
+      repeat: no-repeat;
+    }
+    height: 16.125rem;
+    z-index: 0;
+  }
+}
+
+.card-background-back {
+  position: absolute;
+  top: 2.1875rem;
+  left: 4.375rem;
+  background: {
+    image: url(../images/bg-card-back.png);
+    repeat: no-repeat;
+    size: contain;
+  }
+  width: 17.8125rem;
+  height: 10rem;
+  z-index: 1;
+  &__card_number {
+    // border: 1px solid green;
+    position: absolute;
+    color: v.$White;
+    font-size: 0.6em;
+    top: 4.25rem;
+    left: 13.875rem;
+  }
+}
+
+.card-background-fore {
+  position: absolute;
+  top: 7.6875rem;
+  left: 1.25rem;
+  background: {
+    image: url(../images/bg-card-front.png);
+    repeat: no-repeat;
+    size: contain;
+  }
+  width: 17.75rem;
+  height: 9.8125rem;
+  z-index: 2;
+  color: v.$White;
+  &__logo {
+    // border: 1px solid red;
+    width: 3.125rem;
+    margin: 1.25rem;
+  }
+  &__number {
+    // border: 1px solid yellow;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+  }
+  .container {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 1.5625rem;
+    align-items: flex-end;
+  }
+  &__name {
+    font-size: 0.6em;
+    text-transform: uppercase;
+  }
+  &__numbers {
+    font-size: 0.6em;
+  }
+}

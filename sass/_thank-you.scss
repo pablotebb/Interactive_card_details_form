@@ -1,0 +1,32 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.thank-you {
+  // border: 1px solid red;
+  // display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 23.125rem;
+  padding-top: 3.75rem;
+  gap: 0.9375rem;
+  &__icon {
+    border: 1px solid green;
+    width: 4.375rem;
+    border: none;
+  }
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem;
+    color: v.$Very-dark-violet;
+    font-weight: 500;
+  }
+  &__description {
+    color: v.$Dark-grayish-violet;
+  }
+  &__button-continue {
+    @include m.button-web;
+    width: 90%;
+  }
+}
