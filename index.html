@@ -46,7 +46,7 @@
       <section class="section-form-information">
         <form class="section-form" action="#">
           <!-- INPUT 1 -->
-          <label class="section-form__label-1" for="input-1"
+          <label class="section-form__label-1" for="input_1"
             >Cardholder Name</label
           >
           <input
@@ -57,37 +57,47 @@
             placeholder="e.g. Jane Appleseed"
           />
           <!-- ERROR 1 -->
-          <div class="section-form__input-name--error error"></div>
+          <div class="section-form__input-name--error error">
+            Wrong format, letters only
+          </div>
           <!-- INPUT 2 -->
-          <label class="section-form__label-2" for="input-1">
+          <label class="section-form__label-2" for="input_2">
             Card Number</label
           >
           <input
             class="section-form__input-number"
-            id="input_1"
-            name="input_1"
+            id="input_2"
+            name="input_2"
             type="text"
             placeholder="e.g. 1234 5678 9123 0000"
           />
           <!-- ERROR 2 -->
-          <div class="section-form__input-number--error error"></div>
+          <div class="section-form__input-number--error error">
+            Wrong format, numbers only
+          </div>
           <!-- GRID -->
           <div class="container-1">
             <!-- 1 -->
-            <label class="section-form__date-label-1" for="">
+            <label class="section-form__date-label-1" for="input-mm">
               Exp. Date (MM/YY)</label
             >
             <!-- 2 -->
-            <label class="section-form__date-label-2" for="">CVC</label>
+            <label class="section-form__date-label-2" for="input-cvc"
+              >CVC</label
+            >
             <!-- 3 -->
             <div class="container-1-1">
               <input
                 class="section-form__date-input-mm"
+                id="input-mm"
+                name="input-mm"
                 type="text"
                 placeholder="MM"
               />
               <input
                 class="section-form__date-input-yy"
+                id="input-yy"
+                name="input-yy"
                 type="text"
                 placeholder="YY"
               />
@@ -95,6 +105,8 @@
             <!-- 4 -->
             <input
               class="section-form__date-input-cvc"
+              id="input-cvc"
+              name="input-cvc"
               type="text"
               placeholder="e.g. 123"
             />

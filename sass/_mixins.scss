@@ -14,8 +14,14 @@
   width: 100%;
   height: 3.4375rem;
   border-radius: 8px;
-  background-color: v.$Linear-gradient-active-input-border2;
+  background-color: v.$Very-dark-violet;
   color: v.$White;
   font-size: 0.9em;
   letter-spacing: 0.0625rem;
+}
+
+@mixin error-input {
+  margin-bottom: 1.125rem;
+  color: v.$Red-input-errors;
+  font-size: 0.7em;
 }

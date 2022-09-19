@@ -3,6 +3,7 @@
 
 .section-cards {
   // border: 1px solid red;
+  flex: 1;
   position: relative;
   .section-cards-background {
     background: {
@@ -11,6 +12,16 @@
     }
     height: 16.125rem;
     z-index: 0;
+    @media (min-width: v.$width-media) {
+      background: {
+        image: url(../images/bg-main-desktop.png);
+        repeat: no-repeat;
+        size: cover;
+      }
+      // border: 1px solid red;
+      height: 100vh;
+      width: 405px;
+    }
   }
 }
 
@@ -33,6 +44,20 @@
     font-size: 0.6em;
     top: 4.25rem;
     left: 13.875rem;
+  }
+  @media (min-width: v.$width-media) {
+    // border: 1px solid red;
+    top: 21.875rem;
+    left: 10rem;
+    width: 25.625rem;
+    height: 13.125rem;
+    background-size: cover;
+    border-radius: 0.5625rem;
+    &__card_number {
+      top: 6.1875rem;
+      left: 20.5rem;
+      font-size: 0.9em;
+    }
   }
 }
 
@@ -77,5 +102,35 @@
   }
   &__numbers {
     font-size: 0.6em;
+  }
+  @media (min-width: v.$width-media) {
+    // border: 1px solid black;
+    top: 4.375rem;
+    left: 5.625rem;
+    width: 25.625rem;
+    height: 15rem;
+    background-size: cover;
+    border-radius: 0.625rem;
+    &__logo {
+      // border: 1px solid red;
+      width: 5rem;
+      margin: 1.25rem;
+    }
+    &__number {
+      // border: 1px solid yellow;
+      font-size: 1.3em;
+      height: 4.6875rem;
+      letter-spacing: 0.25rem;
+    }
+    .container {
+      // border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 1.625rem;
+      padding-right: 1.25rem;
+      height: 3.4375rem;
+      align-items: flex-end;
+      font-size: 1.4em;
+    }
   }
 }

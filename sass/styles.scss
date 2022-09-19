@@ -7,8 +7,13 @@
 @use "thank-you";
 
 .main-container {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: v.$width-mobile;
   height: v.$height-mobile;
   margin: 0 auto 60px;
+  @media (min-width: v.$width-media) {
+    width: v.$width-desktop;
+    height: v.$height-desktop;
+    display: flex;
+  }
 }
