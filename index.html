@@ -37,7 +37,10 @@
             <p class="card-background-fore__number">0000 0000 0000 0000</p>
             <div class="container">
               <p class="card-background-fore__name">Jane Appleseed</p>
-              <p class="card-background-fore__numbers">00/00</p>
+              <p class="card-background-fore__numbers">
+                <span class="card-background-fore__numbers--month">00</span> /
+                <span class="card-background-fore__numbers--year">00</span>
+              </p>
             </div>
           </div>
         </div>
@@ -45,7 +48,7 @@
       <!-- SECTION FORM INFORMATION -->
       <section class="section-form-information">
         <form class="section-form" action="#">
-          <!-- INPUT 1 -->
+          <!-- CARD NAME -->
           <label class="section-form__label-1" for="input_1"
             >Cardholder Name</label
           >
@@ -53,14 +56,13 @@
             class="section-form__input-name"
             id="input_1"
             name="input_1"
+            maxlength="33"
             type="text"
             placeholder="e.g. Jane Appleseed"
           />
-          <!-- ERROR 1 -->
-          <div class="section-form__input-name--error error">
-            Wrong format, letters only
-          </div>
-          <!-- INPUT 2 -->
+          <!-- ERROR CARD NAME -->
+          <div class="section-form__input-name--error error"></div>
+          <!-- CARD NUMBER -->
           <label class="section-form__label-2" for="input_2">
             Card Number</label
           >
@@ -68,13 +70,12 @@
             class="section-form__input-number"
             id="input_2"
             name="input_2"
+            maxlength="19"
             type="text"
             placeholder="e.g. 1234 5678 9123 0000"
           />
-          <!-- ERROR 2 -->
-          <div class="section-form__input-number--error error">
-            Wrong format, numbers only
-          </div>
+          <!-- ERROR CARD NUMBER -->
+          <div class="section-form__input-number--error error"></div>
           <!-- GRID -->
           <div class="container-1">
             <!-- 1 -->
@@ -91,6 +92,7 @@
                 class="section-form__date-input-mm"
                 id="input-mm"
                 name="input-mm"
+                maxlength="2"
                 type="text"
                 placeholder="MM"
               />
@@ -98,6 +100,7 @@
                 class="section-form__date-input-yy"
                 id="input-yy"
                 name="input-yy"
+                maxlength="2"
                 type="text"
                 placeholder="YY"
               />
@@ -107,16 +110,17 @@
               class="section-form__date-input-cvc"
               id="input-cvc"
               name="input-cvc"
+              maxlength="3"
               type="text"
               placeholder="e.g. 123"
             />
             <!-- 5 -->
             <div class="container-2">
-              <div class="section-form__mm--error">Can't be blank</div>
-              <div class="section-form__yy--error">Can't be blank</div>
+              <div class="section-form__mm--error"></div>
+              <div class="section-form__yy--error"></div>
             </div>
             <!-- 6 -->
-            <div class="section-form__cvc--error">Can't be blank</div>
+            <div class="section-form__cvc--error"></div>
           </div>
           <button class="section-form__confirm-button">Confirm</button>
         </form>
@@ -141,5 +145,8 @@
         >Frontend Mentor</a
       >. Coded by <a href="#" target="_blank">Pablo Belda</a>.
     </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="./js/main.js"></script>
   </body>
 </html>

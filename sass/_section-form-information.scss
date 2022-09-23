@@ -37,12 +37,20 @@
       cursor: pointer;
       border: 1px solid v.$Linear-gradient-active-input-border1;
     }
+    @media (min-width: v.$width-media) {
+      position: relative;
+    }
   }
 
   &__input-name--error {
     // border: 1px solid red;
     @include m.error-input;
     display: none;
+    @media (min-width: v.$width-media) {
+      position: absolute;
+      // border: 1px solid red;
+      margin-top: 59px;
+    }
   }
 
   &__label-2 {
@@ -52,11 +60,19 @@
   &__input-number {
     @extend .section-form__input-name;
     outline: none;
+    @media (min-width: v.$width-media) {
+      position: relative;
+    }
   }
 
   &__input-number--error {
     @include m.error-input;
     display: none;
+    @media (min-width: v.$width-media) {
+      position: absolute;
+      // border: 1px solid red;
+      margin-top: 135px;
+    }
   }
 
   // GRID
@@ -120,23 +136,27 @@
   }
 
   &__mm--error {
+    // border: 1px solid red;
     display: none;
   }
 
   &__yy--error {
+    position: absolute;
+    left: 100px;
+    // border: 2px solid blue;
     display: none;
   }
 
   // 6
   &__cvc--error {
     // border: 1px solid brown;
-    font-size: 0.6em;
+    font-size: 0.5em;
     color: v.$Red-input-errors;
     display: none;
   }
 
   &__confirm-button {
-    @include m.button-web;
+    @include m.button-web();
   }
 
   @media (min-width: v.$width-media) {
@@ -203,13 +223,20 @@
       font-size: 0.6em;
       margin-top: 0.25rem;
     }
+    &__mm--error {
+      // border: 1px solid red;
+      // display: none;
+    }
+    &__yy--error {
+      left: 49.375rem;
+    }
     // 6
     &__cvc--error {
       margin-left: 5rem;
       margin-top: 0.25rem;
     }
     &__confirm-button {
-      @include m.button-web;
+      @include m.button-web(unset, unset);
       height: 38px;
       font-size: 0.7em;
     }

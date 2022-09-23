@@ -9,4 +9,7 @@
 body {
   font-size: v.$Font-size;
   font-family: v.$Font-family;
+  @media (min-width: v.$width-media) {
+    overflow: hidden;
+  }
 }
